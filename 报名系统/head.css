@@ -1,0 +1,13 @@
+#head{
+	padding:0px;
+	width:100%;
+	height:100px;
+	background:url(images/head.png);
+	repeat-y:false;
+		
+}
+#head1{
+	margin:0px;
+	padding:0px;
+	margin-left:180px;	
+}

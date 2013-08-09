@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="head.css"/>
+<link rel="stylesheet" type="text/css" href="body.css"/>
+<link rel="stylesheet" type="text/css" href="footer.css"/>
+<title>学生注册</title>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+   $(document).ready(function(){
+	    var b=true;
+		$("#account").click(function(){
+			if(b==true){
+				$(this).val("");
+				$(this).attr("class","puton");
+				b=false;	
+			}
+		}) 
+		$("#account").blur(function(){
+			if( $(this).val()==""){
+				$(this).val("数字或字母6-16位组合");
+				$(this).attr("class","inputText");
+				b=true;
+			}
+		})
+   });
+
+   $(document).ready(function(){ 
+		var b=true; 
+		$("#password").click(function(){ 
+			if(b==true){ 
+				$(this).val(""); 
+				$(this).attr("type","password"); 
+				$(this).attr("class","puton"); 
+				b=false; 
+			} 
+		}) 
+		$("#password").blur(function(){ 
+			if( $(this).val()==""){ 
+				$(this).val("数字或字母6-16位组合"); 
+				$(this).attr("type","text"); 
+				$(this).attr("class","inputText"); 
+				b=true; 
+			} 
+		}) 
+	 }); 
+</script>
+</head>
+<!--也头部分-->
+<div id="head">
+ <div id="head1">
+ 	 <img src="images/学生注册.png" />
+ </div>
+</div>
+
+<!--中间部分-->
+<div id="mainContent">
+	<div id="contentForm">
+    	<div id="contentTitle">
+        <img src="images/title.png" />
+        </div>
+        <div id="formDiv">
+        <form name="个人资料" method="post">
+         <ul>
+           <li ><div class="text">姓名：</div><input type="text" name="userName" class="input" /> </li><br />
+         
+           <li ><div class="text">账号：</div><input type="text" name="account" class="inputText" id="account" value="数字或字母6-16位组合"/></li><br />
+           <li ><div class="text">密码：</div><input type="text" name="password" class="inputText" id="password" value="数字或字母6-16位组合"/></li><br />
+           <li ><div class="text">确认密码：</div><input type="password" name="ensurePass" class="input" /></li>
+           <hr align="left" width="455px"/>
+           <li ><div class="text">邮箱：</div><input type="text" name="email" class="input" /></li><br />
+           <li id="button"><input type="image" src="images/button.png" name="submit" /></li><br />
+         
+         </ul>
+         </form>
+        </div>
+    </div>
+</div>
+
+<!--页尾部分-->
+<div id="footer">
+<p id="footerText">copyright:2010郑州轻工业现在教育中心版权所有 邮件地址：<a href="nic@zzuli.edu.cn">nic@zzuli.edu.cn</a></p>
+</div>
+<body>
+</body>
+</html>
